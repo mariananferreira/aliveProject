@@ -38,9 +38,7 @@ export function App() {
         </h1>
         <div id="leftdivcard">
           <input type="file" onChange={onChange}/>
-          <button type="button" id="leftbutton">
-            Use Default Image
-          </button>
+
           &nbsp; &nbsp;
           <button onClick={getCropData} type="button" id="leftbutton">
             Crop Image
