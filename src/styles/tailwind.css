@@ -2,150 +2,162 @@
 @tailwind components;
 @tailwind utilities;
 
-#__next {
-  min-height: 100%;
+.App {
+  font-family: sans-serif;
+  text-align: center;
 }
 
-.name{
-  color:#fff;
-  font-size: 30px;
-  font-family: "Great Vibes", cursive;
+@import url("https://fonts.googleapis.com/css?family=Acme|Lobster");
 
+/* This allow me to have the full width of the page without the initial padding/margin*/
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Acme;
+  min-width: 700px;
 }
 
-.websiteColor{
-  color: #74b9b3;
-
+.splitdiv {
+  height: 100%;
+  width: 50%;
 }
 
-.textAboutMe{
-  color:#fff;
+/* This part contains all of the left side of the screen */
+/* ----------------------------------------- */
+#leftdiv {
+  float: left;
+  background-color: #fafafa;
+  height: 932px;
+}
+
+#leftdivcard {
+  margin: 0 auto;
+  width: 80%;
+  background-color: white;
+  margin-top: 35vh;
+  transform: translateY(-50%);
+  box-shadow: 10px 10px 1px 0px rgba(78, 205, 196, 0.2);
+  border-radius: 10px;
+}
+
+#leftbutton {
+  background-color: #512cf3;
+  border-radius: 5px;
+  color: #fafafa;
+}
+
+.cropper {
+  width: 660px;
+  height: 400px;
+}
+
+/* ----------------------------------------- */
+
+/* This part contains all of the left side of the screen */
+/* ----------------------------------------- */
+#rightdiv {
+  float: right;
+  background-color: #eff0f0;
+  height: 960px;
+}
+
+#itemdivcard {
+  margin: 0 auto;
+  width: 50%;
+  height: 100%;
+  margin-top: 150px;
+}
+
+#imgPreview {
+  width: "100%";
+  height: "300px";
+}
+
+/* ----------------------------------------- */
+
+/* Basic styling */
+/* ----------------------------------------- */
+
+button {
+  outline: none !important;
+  font-family: Lobster;
+  border: none;
+  font-size: 14px;
+  padding: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: -15px;
+  cursor: pointer;
+}
+
+h1 {
+  font-family: Lobster;
+  color: #512cf3;
+  text-align: center;
+  font-size: 40px;
+}
+h2 {
+  font-family: Lobster;
+  color: #512cf3;
+  text-align: center;
+  font-size: 40px;
+}
+
+input {
+  font-family: Acme;
   font-size: 16px;
-  font-family: 'Carme', sans-serif;
-  text-align: justify;
-  text-justify: inter-word;
-
-}
-.test {
-  font-family: 'Courier New', monospace;
-  color:#1e1e26;
-  letter-spacing: 2px;
-  font-weight: 200;
-  line-height: 110%;
+  font-family: 15px;
 }
 
-.background{
-  background-color: #fff;
+input {
+  width: 30%;
+  height: 20px;
+  padding: 16px;
+  margin-left: 1%;
+  margin-right: 2%;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  display: inline-block;
+  border: none;
 }
 
-.summmaryText{
-  color:#1e1e26;
-  font-family: 'Carme', sans-serif;
-  text-align: center;
-  padding-bottom: 25px;
-}
-.summmaryTextNoSpace{
-  color:#1e1e26;
-  font-family: 'Carme', sans-serif;
-  text-align: center;
+input:focus {
+  outline: none !important;
+  border: 1px solid #512cf3;
+  box-shadow: 0 0 1px round #719ece;
 }
 
+/* ----------------------------------------- */
 
-.summmaryTextWhite{
-  color:#fff;
-  font-family: 'Carme', sans-serif;
-  text-align: center;
-
+.main {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
 }
 
-.title{
-  color:#74b9b3;
-  font-weight: bold;
-  font-family: 'Carme', sans-serif;
-  text-align: center;
-  font-size: x-large;
-  padding-bottom: 3%;
-}
-
-.titleWhite{
-  color:#fff;
-  font-weight: bold;
-  font-family: 'Carme', sans-serif;
-  text-align: center;
-  font-size: x-large ;
-  padding-bottom:10% ;
-}
-
-
-.mobileNumber{
-  font-family: 'Carme', sans-serif;
-  color: #1e1e26;
-  padding-left: 15px;
-}
-
-.mobileIcon{
-  display: flex;
-  justify-content: center;
-  color: #74b9b3;
-}
-
-.contactAlign{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-
-}
-
-.imageZoom:hover{
-  transform: scale(1.25);
-
-}
-
-.secondaryHeader:hover{
-  background-color: #74b9b3;
-}
-
-
-.secondary {
-  background-color: #74b9b3;
-}
-
-.buttonStyle{
-  color: #000;
-  font-family: 'Carme', sans-serif;
-
-}
-
-.primary{
-  color:#fff;
-  font-size: 15px;
-  font-family: "Great Vibes", cursive;
-  margin-left: 5px;
-}
-
-.socialMedia{
-  justify-content: center;
-}
-
-.margin{
-  padding-top: 10rem;
-}
-
-.marginAdjust{
-  margin-top: 5rem;
-}
-
-.sectionTitle{
-  font-family: 'Carme', sans-serif;
+.main-h2 {
+  padding-top: 20px;
   text-align: center;
 }
 
-
-.mobileAdjust{
-  margin-right: 15px;
+.body-h1 {
+  padding-top: 20px;
+  text-align: center;
+  color: white;
 }
 
+.inner-p {
+  color: white;
+  text-align: center;
+}
 
-.mobileCollumn{
-  flex-direction: column;
+.main-align {
+  text-align: center;
+}
+
+.form-control {
+  margin-left: 15px;
 }
