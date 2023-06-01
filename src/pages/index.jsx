@@ -10,16 +10,13 @@ import { Testimonials } from '@/components/Testimonials'
 export default function Home() {
   return (
     <>
-      <Head className='bg-slate-200'>
+      {/* <Head className='bg-slate-200'>
         <title>Acompanhamento Nutricional</title>
-      </Head>
+      </Head> */}
       <main className='bg-slate-200'>
-      <Header />
-        <Hero />
+      {/* <Header /> */}
         <PrimaryFeatures />
-        <SecondaryFeatures />
-        <CallToAction />
-        <Testimonials />
+
       </main>
     </>
   )
