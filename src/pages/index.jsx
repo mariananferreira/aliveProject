@@ -9,7 +9,7 @@ export default function Home() {
       {/* <Head className='bg-slate-200'>
         <title>Acompanhamento Nutricional</title>
       </Head> */}
-      <main className='bg-slate-200'>
+      <main className='bg-slate-100'>
        <App /> 
 
       </main>

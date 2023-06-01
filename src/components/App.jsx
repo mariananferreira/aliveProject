@@ -4,7 +4,7 @@ import 'cropperjs/dist/cropper.css'
 
 export function App() {
   const defaultSrc =
-    'https://res.cloudinary.com/olanetsoft/image/upload/v1648679302/uploadedFiles/family.jpg'
+    'https://media.discordapp.net/attachments/1008571235766116413/1113774049739423744/fran_grimaldi_1990_screengrab_of_Model_Harry_Potter_wearing_a_c_4464c326-2e12-42c6-8621-7dd3afb7eaaf.png?width=951&height=634'
 
   const [image, setImage] = useState(defaultSrc)
   const [cropData, setCropData] = useState('')
@@ -16,31 +16,32 @@ export function App() {
     }
   }
   const onChange = (e) => {
-    e.preventDefault();
-    let files;
+    e.preventDefault()
+    let files
     if (e.dataTransfer) {
-      files = e.dataTransfer.files;
+      files = e.dataTransfer.files
     } else if (e.target) {
-      files = e.target.files;
+      files = e.target.files
     }
-    const reader = new FileReader();
+    const reader = new FileReader()
     reader.onload = () => {
-      setImage(reader.result);
-    };
-    reader.readAsDataURL(files[0]);
-  };
+      setImage(reader.result)
+    }
+    reader.readAsDataURL(files[0])
+  }
 
   return (
     <div>
       <div className="splitdiv" id="leftdiv">
-        <h1 className="main-h1">
-          How to Crop and Resize Image in the Browser using CropperJs
-        </h1>
         <div id="leftdivcard">
-          <input type="file" onChange={onChange}/>
-
+          <input type="file" onChange={onChange} />
           &nbsp; &nbsp;
-          <button onClick={getCropData} type="button" id="leftbutton">
+          <button
+            onClick={getCropData}
+            className=" mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent px-6 py-3 text-base font-medium bg-rose-500 text-white shadow-sm hover:bg-rose-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto"
+            type="button"
+            id="leftbutton"
+          >
             Crop Image
           </button>
           <Cropper
@@ -65,9 +66,9 @@ export function App() {
       <div className="splitdiv" id="rightdiv">
         <div id="itemdivcard">
           {cropData ? (
-            <img style={{ height: '50%' }} src={cropData} alt="cropped" />
+            <img style={{  }} src={cropData} alt="cropped" />
           ) : (
-            <h1>Cropped image will apear here!</h1>
+            <h1>Cropped image will apear here</h1>
           )}{' '}
         </div>
       </div>
