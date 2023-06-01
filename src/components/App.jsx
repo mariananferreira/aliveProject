@@ -38,7 +38,7 @@ export function App() {
           &nbsp; &nbsp;
           <button
             onClick={getCropData}
-            className=" mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent px-6 py-3 text-base font-medium bg-rose-500 text-white shadow-sm hover:bg-rose-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto"
+            className=" mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent px-6 py-3 text-base font-medium bg-emerald-500 text-white shadow-sm hover:bg-emerald-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto"
             type="button"
             id="leftbutton"
           >
