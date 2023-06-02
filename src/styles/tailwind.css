@@ -2,15 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body,
-html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  font-family: Acme;
-  min-width: 700px;
-}
+
 
 .splitdiv {
   height: 100%;
@@ -30,7 +22,7 @@ html {
   background-color: white;
   margin-top: 35vh;
   transform: translateY(-50%);
-  box-shadow: 10px 10px 1px 0px rgba(78, 205, 196, 0.2);
+  /* box-shadow: 10px 10px 1px 0px rgba(78, 205, 196, 0.2); */
   border-radius: 10px;
 }
 
@@ -60,6 +52,7 @@ html {
 }
 
 input {
+
   padding: 16px;
   margin-left: 1%;
   margin-right: 2%;
