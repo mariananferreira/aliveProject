@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react'
 import Cropper from 'react-cropper'
 import 'cropperjs/dist/cropper.css'
 import { Container } from '@/components/Container'
+import html2canvas from 'html2canvas'
 
 export function App() {
   const defaultSrc =
@@ -16,6 +17,21 @@ export function App() {
       setCropData(cropper.getCroppedCanvas().toDataURL())
     }
   }
+
+  const handleDownloadImage = async () => {
+    const element = document.getElementById('canvasShot'),
+      canvas = await html2canvas(element),
+      data = canvas.toDataURL('image/jpg'),
+      link = document.createElement('a')
+
+    link.href = data
+    link.download = 'downloaded-image.jpg'
+
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+
   const onChange = (e) => {
     e.preventDefault()
     let files
@@ -68,13 +84,18 @@ export function App() {
         <div className="splitdiv" id="rightdiv">
           <div id="itemdivcard">
             {cropData ? (
-              <div className="-m-2 rounded-xl bg-emerald-500 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
+              <div
+                id="canvasShot"
+                className="box-border"
+                style={{ borderImage: "url('https://interactive-examples.mdn.mozilla.net/media/examples/border-diamonds.png') 30 fill /  30px / 30px space"}}
+              >
                 <img style={{ height: '50%' }} src={cropData} alt="cropped" />{' '}
               </div>
             ) : (
               <h1>Cropped image will apear here</h1>
             )}{' '}
           </div>
+          <button onClick={handleDownloadImage}>Capture Div</button>
         </div>
       </Container>
     </section>
